@@ -2,7 +2,7 @@ import { ScrollView, StyleSheet, Switch, Text, TouchableOpacity, View, Animated 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import ScreenWrapper from '../components/ScreenWrapper';
 import { useTheme } from '../lib/ThemeContext';
-import { useAnimatedTextColor, useAnimatedBackgroundColor } from '../lib/AnimatedThemeColor';
+import { useAnimatedTextColor, useAnimatedBackgroundColor } from '../lib/useAnimatedThemeColor';
 
 export default function AppearanceScreen() {
     const {
