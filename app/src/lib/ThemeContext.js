@@ -22,10 +22,10 @@ export const ThemeProvider = ({ children }) => {
     useEffect(() => {
         setTheme(isDarkMode ? darkTheme : lightTheme);
         
-        // Animated the transition 600ms for a smoother feel
+        // Animated the transition 500ms for a smoother feel
         Animated.timing(themeAnimationProgress, {
             toValue: isDarkMode ? 1 : 0,
-            duration: 600,
+            duration: 500,
             useNativeDriver: false,
         }).start();
         
