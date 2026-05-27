@@ -21,6 +21,7 @@ import PremiumInput from '../components/PremiumInput'; // Using the existing com
 import { useAuth } from '../lib/AuthContext';
 import * as CalendarService from '../lib/CalendarService';
 import { db, storage } from '../lib/firebaseConfig';
+import { formatEventDate, formatEventTime } from '../lib/formatEventDate';
 import { useTheme } from '../lib/ThemeContext';
 import PropTypes from 'prop-types';
 
@@ -343,10 +344,8 @@ export default function CreateEvent({ navigation, route }) {
                 >
                     <Ionicons name="calendar-outline" size={20} color={theme.colors.primary} />
                     <View>
-                        <Text style={styles.dateText}>{date.toLocaleDateString()}</Text>
-                        <Text style={styles.timeText}>
-                            {date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                        </Text>
+                        <Text style={styles.dateText}>{formatEventDate(date)}</Text>
+                        <Text style={styles.timeText}>{formatEventTime(date)}</Text>
                     </View>
                 </TouchableOpacity>
 
