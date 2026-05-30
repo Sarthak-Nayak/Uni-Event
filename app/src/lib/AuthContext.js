@@ -215,6 +215,7 @@ export const AuthProvider = ({ children }) => {
             await setDoc(doc(db, 'users', user.uid), {
                 email: user.email,
                 role: 'student', // Default role
+                points: 0,
                 createdAt: new Date().toISOString(),
                 ...additionalData,
             });
